@@ -6,4 +6,6 @@
 *.html
 *.png
 /data/
+/ml_model/
+/temp_files/
 *.DS_Store
