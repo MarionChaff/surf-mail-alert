@@ -2,7 +2,6 @@ from .params import *
 from .modelling.predictor import Predictor
 from .registry.wgscraper import ScraperWg
 from .registry.tidescraper import TideScraper
-#from .registry.modelstoragemanager import ModelStorageManager
 from .processing.graphgenerator import TideGraphGenerator
 from datetime import date, datetime, timedelta
 import plotly.io as pio
@@ -26,8 +25,6 @@ def update_forecast():
         # Import model
         local_model_path = os.path.join(LOCAL_MODEL_DIR_PATH, 'model.pkl')
         model = joblib.load(local_model_path)
-        #storagemanager = ModelStorageManager(BUCKET_NAME, CREDS_GCP, target_gcp = TARGET_GCP)
-        #model = storagemanager.load_latest_model(LOCAL_MODEL_DIR_PATH)
 
         # Predict surf condition
         predictor = Predictor(model)

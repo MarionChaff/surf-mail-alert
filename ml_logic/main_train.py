@@ -41,10 +41,6 @@ def train():
         except Exception:
             print('🚨 Error saving the model locally')
 
-        #gcploader = ModelStorageManager(BUCKET_NAME, CREDS_GCP, False)
-        #gcploader.save_model(model, LOCAL_MODEL_DIR_PATH)
-        #gcploader.save_model(model, 'model.pkl')
-
         return None
 
     except Exception as e:
